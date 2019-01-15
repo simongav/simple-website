@@ -1,9 +1,9 @@
+
 var margin = {top: 30, right: 30, bottom: 30, left: 30};
 var width = document.getElementById("hist_eg").getBoundingClientRect().width-100;
 var height = 400;
 
-var data = d3.range(-100,100,2)
-           .map(d3.randomNormal());
+var data = $.csv.toArray("Boro.csv")
 
 var g = d3.select("#hist_eg")
         .append("g")

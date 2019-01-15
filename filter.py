@@ -12,9 +12,10 @@ writer = csv.DictWriter(sys.stdout, fieldnames=reader.fieldnames)
 # write the header (first line of the csv)
 writer.writeheader()
 
+x = {}
 # loop through the rows in the original csv
 for row in reader:
 	# filter rows
-    if row['PURPOSE'] == 'WATER' and float(row['AMOUNT']) > 1000:
-    	# write rows that match above filter
-        writer.writerow(row)
+     x.append(row['BORONAME'])
+     # write rows that match above filter
+        
